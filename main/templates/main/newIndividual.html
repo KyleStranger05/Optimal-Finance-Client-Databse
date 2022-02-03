@@ -1,0 +1,56 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+{% extends "main/base.html"%}
+
+{% block content %}
+<form class="form-group mt-4" action="" method="POST">
+    {% csrf_token %}
+    <h1 style="text-align: center "> New Individual Customer </h1>
+    <br>
+    <div style="text-align: left; width: 100%; padding-left: 40px; padding-right: 60px">
+        <div class="row mb-3">
+            <div class="col">
+                <ul >
+                <li class='list-group-item ' style="background-color : #282828; color: white;">Individual General Information</li>
+                <li class='list-group-item' style="border: 1px solid black;" style="border: 1px solid black;">Surname {{ form.Surname }}</li>
+                <li class='list-group-item' style="border: 1px solid black;">Name {{ form.Name }}</li>
+                <li class='list-group-item' style="border: 1px solid black;">ID Number {{ form.IDNo }}</li>
+                <li class='list-group-item' style="border: 1px solid black;">Tax Registration Number  {{ form.TaxRegNo }}</li>
+                <li class='list-group-item' style="border: 1px solid black;">Provisional Tax Date 1  {{ form.ProvisionalTaxDate1 }}</li>
+                <li class='list-group-item' style="border: 1px solid black;">Provisional Tax Date 2  {{ form.ProvisionalTaxDate2 }}</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                <li class='list-group-item ' style="background-color : #282828; color: white;">Individuals Address</li>
+                <li class='list-group-item' style="border: 1px solid black;">Street Name {{ form.StreetName }}</li>
+                <li class='list-group-item' style="border: 1px solid black;">Street Number {{ form.StreetNo }}</li>
+                <li class='list-group-item' style="border: 1px solid black;">Building Name {{ form.BuildingName }}</li>
+                <li class='list-group-item' style="border: 1px solid black;">Building Number {{ form.BuildingNo }}</li>
+                <li class='list-group-item' style="border: 1px solid black;">Suburb {{ form.Suburb }}</li>
+                <li class='list-group-item' style="border: 1px solid black;">City {{ form.City }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <ul>
+                <li class='list-group-item ' style="background-color : #282828; color: white;">Contact Details</li>
+                <li class='list-group-item' style="border: 1px solid black;">Contact Person {{ form.ContactPerson }}</li>
+                <li class='list-group-item' style="border: 1px solid black;">Cell Number {{ form.CellNumber }}</li>
+                <li class='list-group-item' style="border: 1px solid black;">E-mail Address {{ form.EmailAddress }}</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                <li class='list-group-item ' style="background-color : #282828; color: white;">Customer Services Rendered</li>
+                <li class='list-group-item' style="border: 1px solid black;">  {{ form.IT12 }} IT 12's </li>
+                <li class='list-group-item' style="border: 1px solid black;"> {{ form.IsProvisionalTaxPayer }} Provisional Tax </li>
+                </ul>
+            </div>
+            <div class="row mb-3">
+                <input type="submit" class="btn btn-dark">
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

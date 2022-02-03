@@ -1,0 +1,41 @@
+{% extends "main/base.html"%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+{% block content %}
+<body>
+<br>
+    {% if user.is_authenticated %}
+    <h1 class="h1" style="text-align: center">Companies IT14's</h1>
+
+<table class="table table-hover table-dark"  style="width: 80%;text-align: center;">
+    <thead>
+        <tr>
+            <th scope="col">Company</th>
+            <th scope="col">Ref No.</th>
+            <th scope="col">Contact Person</th>
+            <th scope="col">E-mail Address</th>
+            <th scope="col">Completed?</th>
+            <th scope="col">Save</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for x in it14s %}
+        <tr>
+            <th scope="row">{{ x.CompanyName }}</th>
+            <th>{{ x.RefNo }}</th>
+            <th>{{ x.ContactPerson }}</th>
+            <th>{{ x.EmailAddress }}</th>
+            <form class="form-group mt-4" method="post">
+            {% csrf_token %}
+            <th>{{ form.isdone_IT14  }}</th>
+            <th><button class="btn btn-success" type="submit">Save</button> </th>
+            </form>
+    {% endfor %}
+</table>
+
+    {% endif %}
+</body>
+{% endblock %}
+</html>

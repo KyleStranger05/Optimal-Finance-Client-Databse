@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+{% extends "main/base.html"%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+{% block content %}
+<body>
+<br>
+    {% if user.is_authenticated %}
+    <h1 class="h1" style="text-align: center"> <U> <B>Reports</B></U> </h1>
+    <BR>
+    <h4 class="h4" style="text-align: center">General</h4>
+    <br>
+
+    <div class="row mb-2" style="padding-left: 50px; padding-right: 50px">
+    <div class="col" >
+        <a href="{% url 'printAllpdf' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all Clients to PDF</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all Clients to CSV</h2> </a>
+    </div>
+    </div>
+
+    <div class="row mb-2" style="padding-left: 50px; padding-right: 50px">
+    <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all Companies to PDF</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all Companies to CSV</h2> </a>
+    </div>
+    </div>
+
+    <div class="row mb-2" style="padding-left: 50px; padding-right: 50px">
+    <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all Individuals to PDF</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all Individuals to CSV</h2> </a>
+    </div>
+    </div>
+
+    <br>
+    <h4 class="h4" style="text-align: center">Company Clients Checklists</h4>
+    <br>
+
+    <div class="row mb-2" style="padding-left: 50px; padding-right: 50px">
+    <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all <b><u>Incomplete</u></b> IT14'S</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all <b><u>Incomplete</u></b> IT14'S </h2> </a>
+    </div>
+        <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all <b><u>Complete</u></b> IT14'S</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all <b><u>Complete</u></b> IT14'S</h2> </a>
+    </div>
+    </div>
+
+    <div class="row mb-2" style="padding-left: 50px; padding-right: 50px">
+    <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Incomplete</u></b> Financial Statements</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Incomplete</u></b> Financial Statements</h2> </a>
+    </div>
+        <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Complete</u></b> Financial Statements</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Complete</u></b> Financial Statements</h2> </a>
+    </div>
+    </div>
+
+    <div class="row mb-2" style="padding-left: 50px; padding-right: 50px">
+    <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Incomplete</u></b> Provisionals</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Incomplete</u></b> Provisionals</h2> </a>
+    </div>
+        <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Complete</u></b> Provisionals</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Complete</u></b> Provisionals</h2> </a>
+    </div>
+    </div>
+
+    <div class="row mb-2" style="padding-left: 50px; padding-right: 50px">
+    <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Incomplete</u></b> Annual Returns</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Incomplete</u></b> Annual Returns</h2> </a>
+    </div>
+        <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Complete</u></b> Annual Returns</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Complete</u></b> Annual Returns</h2> </a>
+    </div>
+    </div>
+
+    <br>
+    <h4 class="h4" style="text-align: center">Individual Clients Checklists</h4>
+    <br>
+
+    <div class="row mb-2" style="padding-left: 50px; padding-right: 50px">
+    <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all <b><u>Incomplete</u></b> IT12'S</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all <b><u>Incomplete</u></b> IT12'S </h2> </a>
+    </div>
+        <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all <b><u>Complete</u></b> IT12'S</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 20px; color: white;">Print all <b><u>Complete</u></b> IT12'S</h2> </a>
+    </div>
+    </div>
+
+    <div class="row mb-2" style="padding-left: 50px; padding-right: 50px">
+    <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Incomplete</u></b> Provisionals</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Incomplete</u></b> Provisionals</h2> </a>
+    </div>
+        <div class="col" >
+        <a href="{% url 'companyIT14' %}" class="btn btn-danger btn-danger btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;" > <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Complete</u></b> Provisionals</h2> </a>
+    </div>
+    <div class="col">
+        <a href="{% url 'newIndividual' %}" class="btn btn-success btn-success btn-block" style="height:100px;width:100%;background-size:     cover; background-repeat:   no-repeat;"> <h2 class="h2" style="text-align: center; padding-top: 5px; color: white;">Print all <b><u>Complete</u></b> Provisionals</h2> </a>
+    </div>
+    </div>
+    {% else %}
+    <h1 class="h1" style="text-align: center">Please ensure that you are logged in</h1>
+    {% endif %}
+</body>
+{% endblock %}
+</html>
