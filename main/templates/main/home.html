@@ -8,9 +8,39 @@
 {% block content %}
 <body>
 <br>
-    <h1 class="h1" style="text-align: center">Dashboard</h1>
+
 
     {% if user.is_authenticated %}
+    <h1 class="h1" style="text-align: center">Dashboard</h1>
+
+    <p> Number of Company Clients  = {{ totalCompanyClients }}</p>
+
+    <br>
+
+    <p> Number of Individual Clients  = {{ totalIndividualClients }}</p>
+
+    <br>
+
+    <p>Total Number of Clients = {{ totalClients }}</p>
+
+    <div style="width 50%; text-align: center;">
+        <h2 class="h2">Quick Access</h2>
+
+        <div class="row mb-3">
+            <div class="col">
+                <a href="reportsHome" class="btn btn-primary">Reports </a>
+            </div>
+            <div class="col">
+                <a href="checklistHome" class="btn btn-primary">Checklist </a>
+            </div>
+            <div class="col">
+                <a href="newCustomer" class="btn btn-primary">New Customer </a>
+            </div>
+        </div>
+    </div>
+
+    <a href="printAllpdf" class="btn btn-danger">Print All Clients</a>
+
 
     {% endif %}
 </body>

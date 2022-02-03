@@ -12,9 +12,16 @@ from django.template.loader import render_to_string
 
 
 
-
+# Dashboard
 def home(request):
-    return render(request, 'main/home.html')
+
+    totalCompanyClients = CompanyClass.objects.count()
+    totalIndividualClients = IndividualClass.objects.count()
+    totalClients = totalCompanyClients + totalIndividualClients
+
+
+    content = {'totalClients':totalClients , 'totalIndividualClients':totalIndividualClients , 'totalCompanyClients':totalCompanyClients}
+    return render(request, 'main/home.html', content)
 
 def newCustomer(request):
     return render(request, 'main/newCustomer.html')
